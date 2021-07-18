@@ -10,7 +10,7 @@ export default function App() {
   <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerTitleAlign: "center" }}>
         <Stack.Screen name="Temperature" component={ZipCodeScreen}
-        options={{ headerStyle: { backgroundColor: "#FFD471" } }}/>
+        options={{ headerStyle: { backgroundColor: "#FFD481" } }}/>
         <Stack.Screen name="Weather" component={WeatherScreen}
         options={{ headerStyle: { backgroundColor: "#FFD471" } }}/>
  </Stack.Navigator>

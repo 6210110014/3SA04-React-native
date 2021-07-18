@@ -14,13 +14,17 @@ const availableZipItems = [
    ]
    
 
-   const ZipItem = ({place, code, navigation}) => (
-    <TouchableHighlight onPress={() => navigation.navigate('Weather', { zipCode: code})}>
-    <View style= {styles.zipItem}>
-    <Text>{place}</Text>
-    <Text >{code}</Text>
+   const ZipItem = ({place, code,navigation,pic}) => (
+    <TouchableHighlight onPress={() => 
+        navigation.navigate('Weather', { zipCode: code})}>
+
+    <View style={styles.zipItem}>
+        <ImageBackground source={pic} style={styles.contan}>
+         <Text style={styles.textEditor}>{place}</Text>
+         </ImageBackground>
     </View>
-    </TouchableHighlight>
+    
+</TouchableHighlight>
     )
    
 
@@ -33,7 +37,7 @@ const availableZipItems = [
      keyExtractor={_keyExtractor}
      renderItem={({item}) => <ZipItem {...item} navigation={navigation}/>}
      />
-     <StatusBar style="auto" />
+     
     </View>
      );
      }
@@ -41,8 +45,22 @@ const availableZipItems = [
         zipItem: {
         flex:1,
         flexDirection:'row',
-        justifyContent:'center'
-        },
+        justifyContent:'center'    
+    
+},
+contan:{
+    height:100,
+    width:415,
+    padding:55,
+    justifyContent:'center',
+    alignItems:'center',
+},
+    textEditor:{
+        fontWeight: "bold",
+        alignItems: 'center',
+        color:'white',
+        fontSize:20,    
+    },
         zipPlace: {
         flex:1,
         },
