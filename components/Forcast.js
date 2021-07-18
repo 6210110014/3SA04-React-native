@@ -9,10 +9,10 @@ export default function Forecast(props) {
     <Text >Temperature Min{props.tempMin}</Text>
     <Text >Temperature Max</Text>
     <View>
-        <Text>{props.temp}</Text>
-        <Text>°C</Text>
+        <Text>{props.temp}°C</Text>
+        <Text></Text>
         <Text >{props.tempMin}°C</Text>
-        <Text s>{props.tempMax}°C</Text>
+        <Text >{props.tempMax}°C</Text>
     </View>
 </View>
     );
