@@ -3,7 +3,16 @@ import { ImageBackground, Text, StyleSheet } from 'react-native'
 import Forecast from './Forcast';
  
 export default function Weather(props) {
-    useEffect(() => {
+    const [forecastInfo, setForecastInfo] = useState({
+        main: '-',
+        description: '-',
+        temp: 0,
+        wind:0,
+        temp: 0,
+        tempMin: 'min',
+        tempMax: 'max'
+        }) 
+        useEffect(() => {
         console.log(`fetching data with zipCode = ${props.zipCode}`)
         if (props.zipCode) {
         fetch(`http://api.openweathermap.org/data/2.5/weather?q=${props.zipCode},th&units=metric&APPID=3b887ec0aa70d97a208e7d99513fecd1`)
@@ -12,7 +21,10 @@ export default function Weather(props) {
         setForecastInfo({
         main: json.weather[0].main,
         description: json.weather[0].description,
-        temp: json.main.temp
+        temp: json.main.temp,
+        tempMin: json.main.temp_min,
+        tempMax: json.main.temp_max,
+        wind: json.wind.speed
         });
         })
         .catch((error) => {
@@ -20,11 +32,7 @@ export default function Weather(props) {
         });
         }
         }, [props.zipCode])
-    const [forecastInfo, setForecastInfo] = useState({
-        main: '-',
-        description: '-',
-        temp: 0
-        }) 
+    
 
     return (
         

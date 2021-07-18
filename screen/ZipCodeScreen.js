@@ -1,6 +1,5 @@
 import React from 'react'
 import { FlatList,View,StatusBar,Text,StyleSheet,TouchableHighlight  } from 'react-native'
-
 import { useNavigation } from '@react-navigation/native'
 
 
