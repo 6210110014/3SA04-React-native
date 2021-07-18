@@ -1,6 +1,7 @@
-import React,{ useState } from 'react'
+import React,{ useEffect, useState } from 'react'
 import { ImageBackground, Text, StyleSheet } from 'react-native'
 import Forecast from './Forcast';
+ 
 export default function Weather(props) {
     useEffect(() => {
         console.log(`fetching data with zipCode = ${props.zipCode}`)
