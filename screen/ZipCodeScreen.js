@@ -59,7 +59,7 @@ contan:{
         fontWeight: "bold",
         alignItems: 'center',
         color:'white',
-        fontSize:20,    
+        fontSize:30,    
     },
         zipPlace: {
         flex:1,
