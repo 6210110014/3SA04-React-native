@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text,StyleSheet } from 'react-native'
 export default function Forecast(props) {
     return (
     <View >
@@ -17,3 +17,21 @@ export default function Forecast(props) {
 </View>
     );
    }
+   const styles = StyleSheet.create({
+    textEditor:{
+        fontSize: 50,
+        color:'#00fa9a',
+        fontWeight: "bold",
+        textAlign:'center',
+    },
+    temp:{
+        margin:20,
+        paddingTop:30,
+        color:'white',
+        alignItems: 'center',
+        fontWeight:"bold",
+        textAlign:'center',
+        fontSize:80
+    }
+})
+        
